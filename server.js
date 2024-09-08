@@ -14,8 +14,8 @@ const app = express();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:3000', // Local development
-  'https://your-frontend-url.vercel.app', // Vercel production
-  'https://your-frontend-url.com' // Your custom domain
+  'https://master--keen-stardust-b69330.netlify.app', // Netlify production
+  'https://your-frontend-url.com' // Your custom domain, if any
 ];
 
 app.use(cors({
