@@ -13,19 +13,18 @@ const app = express();
 
 // CORS configuration
 const allowedOrigins = [
-  'http://localhost:3000', // Local development
-  'https://master--keen-stardust-b69330.netlify.app', // Netlify production
-  'https://your-frontend-url.com' // Your custom domain, if any
+  'http://localhost:3000',
+  'https://master--keen-stardust-b69330.netlify.app'
 ];
 
 app.use(cors({
   origin: function(origin, callback) {
-    // Allow requests with no origin (e.g., mobile apps, Postman)
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       return callback(null, true);
     }
     callback(new Error('Not allowed by CORS'));
-  }
+  },
+  credentials: true
 }));
 
 app.use(express.json());
