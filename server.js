@@ -14,7 +14,7 @@ const app = express();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://master--keen-stardust-b69330.netlify.app'
+  'https://keen-stardust-b69330.netlify.app/'
 ];
 
 app.use(cors({
